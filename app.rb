@@ -15,7 +15,12 @@ get '/meh' do
 end
 
 get '/cat' do
-  "<div style='border: 3px dashed red'>
-    <img src='http://bit.ly/1eze8aE'>
-  </div>"
+  @sample = %w(Amigo Oscar Viking Giorgio).sample
+  erb :index
 end
+
+# get '/cat' do
+#   def sample_array
+#   @sample = %w(Amigo Oscar Viking Giorgio).sample
+#   end
+# end
