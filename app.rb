@@ -14,8 +14,14 @@ get '/meh' do
   "Fuck this shit"
 end
 
-get '/cat' do
+get '/random-cat' do
   @sample = %w(Amigo Oscar Viking Giorgio).sample
+  erb :index
+end
+
+get '/named-cat' do
+  @name = params[:name]
+  p params[:name]
   erb :index
 end
 
