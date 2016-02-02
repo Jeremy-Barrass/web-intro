@@ -25,6 +25,24 @@ get '/named-cat' do
   erb :index
 end
 
+post '/named-cat' do
+  @name = params[:name]
+  p params[:name]
+  erb :index
+end
+
+get '/name-the-cat' do
+  @name = params[:name]
+  p params[:name]
+  erb :form
+end
+
+post '/name-the-cat' do
+  @name = params[:name]
+  p params[:name]
+  erb :form
+end
+
 # get '/cat' do
 #   def sample_array
 #   @sample = %w(Amigo Oscar Viking Giorgio).sample
